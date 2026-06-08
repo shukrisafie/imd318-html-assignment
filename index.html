@@ -30,8 +30,8 @@ header {
 
 .banner {
     width: 100%;
-    height: 220px;
-    object-fit: cover;
+    height: auto;
+    display: block;
 }
 
 h1 {
@@ -39,15 +39,15 @@ h1 {
 }
 
 .topnav {
-    overflow: hidden;
-    background-color: #333;
-    text-align: center;
+    background-color:#333;
+    display: flex;
+    justify-content:center;
+    flex-wrap:wrap;
 }
 
-.topnav a {
-    display: inline-block;
+.topnav a{
     color: white;
-    padding: 14px 20px;
+    padding: 14px 18px;
     text-decoration: none;
 }
 
@@ -67,8 +67,14 @@ footer{
   margin-top:50px;
   background:#333;
   color:white;
-  padding:10px;
+  padding:8px;
   text-align:center;
+  font-size:14px;
+  line-height:1.3;
+}
+
+footer p{
+   Margin:3px 0;
 }
 
 button {
@@ -84,6 +90,15 @@ button {
     border-radius:10px;
     text-align:center;
     margin-top:20px;
+    max-width:900px;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.card:hover{
+    transform:translateY(-3px);
+    transition:0.3s;
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
 }
 
 .audio-section{
@@ -126,13 +141,28 @@ button {
             My experience covers information security and cybersecurity governance, policy development, risk management, compliance, and improving organisational security posture.
         </p>
         <p>
-            <I>Explore my profile, experience, education and interests.<I>
+            Feel free to explore my profile, experience, education and interests.
         </p>
+
+<p>
+    <b><i>Today's Date:</b>
+    <span id="today"></span></i>
+</p>
+
+<script>
+document.getElementById("today").innerHTML =
+new Date().toLocaleDateString('en-GB', {
+    day: 'numeric',
+    month: 'long',
+    year: 'numeric'
+});
+</script>
+
     </div>
 
     <div class="audio-section">
         <p>🎵 Background Music</p>
-        <audio controls autoplay loop>
+        <audio controls autoplay loop style="width:100%; max-width:400px;">
             <source src="intro.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
@@ -141,7 +171,13 @@ button {
 </div>
 
 <footer>
-Copyright © SS2026 | Last Update: June 2026 | Best Viewed: Google Chrome
+
+<p>
+Copyright © SS2026 |
+Last Updated: 9 June 2026 |
+Best Viewed: Google Chrome
+</p>
+
 </footer>
 
 </body>

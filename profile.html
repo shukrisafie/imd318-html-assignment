@@ -29,8 +29,8 @@ header {
 
 .banner {
     width: 100%;
-    height: 220px;
-    object-fit: cover;
+    height: auto;
+    display: block;
 }
 
 h1 {
@@ -38,21 +38,15 @@ h1 {
 }
 
 .topnav {
-    overflow: hidden;
-    background-color: #333;
-    text-align: center;
+    background-color:#333;
+    display: flex;
+    justify-content:center;
+    flex-wrap:wrap;
 }
 
-.topnav {
-    overflow: hidden;
-    background-color: #333;
-    text-align: center;
-}
-
-.topnav a {
-    display: inline-block;
+.topnav a{
     color: white;
-    padding: 14px 20px;
+    padding: 14px 18px;
     text-decoration: none;
 }
 
@@ -61,24 +55,32 @@ h1 {
     color: black;
 }
 
-.content{
- padding:30px;
- min-height: 500px;
+.content{ 
+    padding:30px; 
+    min-height:500px;
 }
 
 footer{
   margin-top:50px;
   background:#333;
   color:white;
-  padding:10px;
+  padding:8px;
   text-align:center;
+  font-size:14px;
+  line-height:1.3;
+}
+
+footer p{
+   Margin:3px 0;
 }
 
 .profile-pic {
-    float:left;
-    margin-right:20px;
+    display:block;
+    width:200px;
+    max-width:100%;
+    height:auto;
+    margin:0 auto 20px auto;
     border-radius:50%;
-    border-radius: 50%;
 }
 
 button {
@@ -89,10 +91,16 @@ button {
 }
 
 table{
+    width:100%;
+    max-width:900px;
     border-collapse:collapse;
     margin:auto;
-    font-size: 16px;
-    Background-color:#ECFFDC;
+    font-size:16px;
+    background-color:#ECFFDC;
+}
+
+.table-container{
+    overflow-x:auto;
 }
 
 th{
@@ -108,6 +116,18 @@ th, td{
 td ul{
     margin:0;
     padding-left:20px;
+}
+
+.about-card{
+    background:#ECFFDC;
+    border:1px solid #ccc;
+    border-radius:10px;
+    padding:20px;
+    margin-top:20px;
+    width:100%;
+    max-width:900px;
+    border-collapse:collapse;
+    margin:auto;
 }
 
 </style>
@@ -135,7 +155,9 @@ td ul{
 
 <img src="SS.jpg" class="profile-pic" width="200">
 
-<table border="1" cellpadding="10" cellspacing="0" width="70%">
+<div class="table-container">
+
+<table border="1" cellpadding="10" cellspacing="0">
 <tr>
 <th colspan="2" bgcolor="#d9f2d9">Personal Information</th>
 </tr>
@@ -191,6 +213,8 @@ td ul{
 
 <br>
 
+<div class="about-card">
+
 <h2>About Me</h2>
 
 <p align="justify">
@@ -207,8 +231,18 @@ I am passionate about building resilient organisations through effective cyberse
 
 </div>
 
+</div>
+
+</div>
+
 <footer>
-Copyright © SS2026 | Last Update: June 2026 | Best Viewed: Google Chrome
+
+<p>
+Copyright © SS2026 |
+Last Updated: 9 June 2026 |
+Best Viewed: Google Chrome
+</p>
+
 </footer>
 
 </body>
